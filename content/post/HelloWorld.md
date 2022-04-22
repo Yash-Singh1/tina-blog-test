@@ -1,7 +1,7 @@
 ---
-title: This is a title
+title: I am changing the title
 ---
 
-This is a test
+So basically this is a post body.
 
-How are you doing?
+*   Yayyyy
