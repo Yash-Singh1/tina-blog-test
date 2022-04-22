@@ -1,15 +1,16 @@
-name: Build Pull request
+name: Build
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  push: {}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ["12", "14", "16", "17"]
-    name: Node ${{ matrix.node }} sample
+        node: ["16", "17"]
+    name: Node ${{ matrix.node }} build
     steps:
       - uses: actions/checkout@v2
       - name: Setup node

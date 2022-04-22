@@ -1,0 +1,19 @@
+name: Lint Code
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push: {}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint code
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+      - name: Install packages
+        run: yarn install
+      - name: Run Linting
+        run: yarn lint
