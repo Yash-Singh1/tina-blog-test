@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import type { ReactNode } from 'react'
 
-export const Layout = (props) => {
+export const Layout = (props: { children: ReactNode }) => {
   return (
     <div
       style={{

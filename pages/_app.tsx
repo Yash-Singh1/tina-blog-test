@@ -1,6 +1,8 @@
+import { AppProps } from 'next/dist/shared/lib/router/router';
+import { ReactNode } from 'react';
 import DynamicTina  from '../.tina/components/TinaDynamicProvider'
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps & { Component: JSX.Element }) => {
   return (
     <DynamicTina>
         <Component {...pageProps} />
